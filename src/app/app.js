@@ -2,7 +2,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
 import '../style/app.css';
-import {DefaultState, DefaultCtrl} from './default';
+import {DefaultState, DefaultCtrl, InstaService, InstaServiceName} from './default';
 
 let app = () => {
   return {
@@ -22,6 +22,7 @@ angular.module(MODULE_NAME, ['ui.router'])
 	.run($state => $state.go('Default'))
   .directive('app', app)
 	.controller('DefaultCtrl', DefaultCtrl)
+	.service(InstaServiceName, InstaService)
 	;
 
 export default MODULE_NAME;
