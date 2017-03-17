@@ -1,11 +1,27 @@
 /* styles in src/style directory are applied to the whole page */
+* {
+	top: 0; left: 0;
+	bottom: 0; right: 0;
+	margin: 0; padding: 0;
+	cursor: default;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 20px;
+	font-family: 'Roboto';
+}
+
 body {
-  background: #0147A7;
-  color: #fff;
+	background-color: #7f8c8d;
+  color: #2c3e50;
 }
 
 a {
-  color: #03A9F4;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 main {
@@ -19,4 +35,35 @@ main {
 footer {
   text-align: center;
   font-size: 0.8em;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	height: 5rem;
+	font-size: 1.5rem;
+	background-color: #e67e22;
+	color: white;
+	padding: 1rem;
+}
+
+.content {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.small, .large {
+	background-color: #ecf0f1;
+	width: 30%;
+	padding: 1rem;
+	margin: 1rem;
+	font-size: 0.8rem;
+	color: #182229;
+}
+
+img {
+	width: 100%;
+	padding-bottom: 0.5rem;
 }

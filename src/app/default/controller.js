@@ -4,9 +4,13 @@ export const DefaultCtrl = [
 	InstaServiceName,
 	class DefaultCtrl {
 		constructor($scope, InstaService) {
-			this.title = 'Instagram';
+			this.title = 'INSTAFEED';
 			InstaService.getPosts()
-				.then(({data: {data: posts}}) => {
+				.then(posts => {
+					console.log(posts);
+					return posts.data.data;
+				})
+				.then(posts => {
 					console.log(posts);
 					$scope.posts = posts;
 				});
