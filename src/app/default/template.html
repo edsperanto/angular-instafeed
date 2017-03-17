@@ -4,6 +4,6 @@
 <div class="content">
 	<div ng-click="clicked = !clicked" ng-class="clicked ? 'large' : 'small'" ng-repeat="post in posts">
 		<img ng-src="{{post.images.standard_resolution.url}}" alt="{{ post.caption.text }}">
-		<h3>{{post.caption.text}}</h3>
+		<h4>{{post.caption.text}}</h4>
 	</div>
 </div>
