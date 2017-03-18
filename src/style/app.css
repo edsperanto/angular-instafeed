@@ -68,7 +68,7 @@ footer {
 .grid-btn {
 	animation-duration: 1s;
 	animation-name: to-grid;
-	transform: rotate(90deg);
+	animation-fill-mode: forwards;
 }
 
 @keyframes to-grid {
@@ -79,7 +79,7 @@ footer {
 .list-btn {
 	animation-duration: 1s;
 	animation-name: to-list;
-	transform: rotate(0deg);
+	animation-fill-mode: forwards;
 }
 
 @keyframes to-list {
@@ -102,8 +102,7 @@ footer {
 .grid {
 	animation-duration: 1s;
 	animation-name: grid-btn;
-	height: calc((100% + 0.2rem) / 5) !important;
-	width: 100% !important;
+	animation-fill-mode: forwards;
 }
 
 @keyframes grid-btn {
@@ -120,8 +119,7 @@ footer {
 .list {
 	animation-duration: 1s;
 	animation-name: list-btn;
-	height: calc(100% / 3) !important;
-	width: 80% !important;
+	animation-fill-mode: forwards;
 }
 
 @keyframes list-btn {
@@ -148,6 +146,7 @@ footer {
 	font-size: 0.8rem;
 	color: #182229;
 	line-height: 1rem;
+	float: left;
 }
 
 .small > h4 {
@@ -160,13 +159,13 @@ footer {
 .small {
 	animation-duration: 1s;
 	animation-name: unenhance;
-	width: calc(33.3% - 2rem);
+	animation-fill-mode: forwards;
 }
 
 .large {
 	animation-duration: 1s;
 	animation-name: enhance;
-	width: 100%;
+	animation-fill-mode: forwards;
 }
 
 @keyframes enhance {
@@ -187,7 +186,80 @@ footer {
 	}
 }
 
-img {
-	width: 100%;
-	padding-bottom: 0.5rem;
+.list-img {
+	animation-duration: 1s;
+	animation-name: list-img;
+	animation-fill-mode: forwards;
+}
+
+@keyframes list-img {
+	from{ 
+		width: 100%; 
+		padding-bottom: 0.5rem;
+	}
+	to{ 
+		width: calc(33.3% - 3rem); 
+		padding-bottom: 0rem;
+	}
+}
+
+.grid-img {
+	animation-duration: 1s;
+	animation-name: grid-img;
+	animation-fill-mode: forwards;
+}
+
+@keyframes grid-img {
+	from{ 
+		width: calc(33.3% - 3rem); 
+		padding-bottom: 0rem;
+	}
+	to{ 
+		width: 100%; 
+		padding-bottom: 0.5rem;
+	}
+}
+
+.list-text {
+	animation-duration: 1s;
+	animation-name: list-text;
+	animation-fill-mode: forwards;
+	float: right;
+}
+
+@keyframes list-text {
+	from {
+		width: 100%;
+		font-size: 1rem;
+		line-height: 1rem;
+		padding: 0rem;
+	}
+	to {
+		width: 70%;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		padding: 2rem;
+	}
+}
+
+.grid-text {
+	animation-duration: 1s;
+	animation-name: grid-text;
+	animation-fill-mode: forwards;
+	float: right;
+}
+
+@keyframes grid-text {
+	from {
+		width: 70%;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		padding: 2rem;
+	}
+	to {
+		width: 100%;
+		font-size: 1rem;
+		line-height: 1rem;
+		padding: 0rem;
+	}
 }

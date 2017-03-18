@@ -5,6 +5,7 @@ export const DefaultCtrl = [
 	class DefaultCtrl {
 		constructor($scope, InstaService) {
 			this.title = 'INSTAFEED';
+			$scope.clicked = true;
 			InstaService.getPosts()
 				.then(posts => {
 					console.log(posts);
