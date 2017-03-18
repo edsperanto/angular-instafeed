@@ -72,12 +72,8 @@ footer {
 }
 
 @keyframes to-grid {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(90deg);
-	}
+	from { transform: rotate(0deg); }
+	to { transform: rotate(90deg); }
 }
 
 .list-btn {
@@ -87,12 +83,8 @@ footer {
 }
 
 @keyframes to-list {
-	from {
-		transform: rotate(90deg);
-	}
-	to {
-		transform: rotate(0deg);
-	}
+	from { transform: rotate(90deg); }
+	to { transform: rotate(0deg); }
 }
 
 #view-btn div {
@@ -104,7 +96,6 @@ footer {
 }
 
 #view-btn div div {
-	width: 100%;
 	background-color: white;
 }
 
@@ -112,29 +103,35 @@ footer {
 	animation-duration: 1s;
 	animation-name: grid-btn;
 	height: calc((100% + 0.2rem) / 5) !important;
+	width: 100% !important;
+}
+
+@keyframes grid-btn {
+	from {
+		height: calc(100% / 3);
+		width: 80%;
+	}
+	to {
+		height: calc((100% + 0.2rem) / 5);
+		width: 100%;
+	}
 }
 
 .list {
 	animation-duration: 1s;
 	animation-name: list-btn;
 	height: calc(100% / 3) !important;
-}
-
-@keyframes grid-btn {
-	from {
-		height: calc(100% / 3);
-	}
-	to {
-		height: calc((100% + 0.2rem) / 5);
-	}
+	width: 80% !important;
 }
 
 @keyframes list-btn {
 	from {
 		height: calc((100% + 0.2rem) / 5);
+		width: 100%;
 	}
 	to {
 		height: calc(100% / 3);
+		width: 80%;
 	}
 }
 
