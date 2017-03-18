@@ -1,25 +1,20 @@
 <div class="header">
 	<h1>{{ Default.title }}</h1>
-	<div ng-click="clicked = true" id="list">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-	<div ng-click="clicked = false" id="grid">
+	<div ng-click="clicked = !clicked" ng-class="clicked ? 'list-btn' : 'grid-btn'" id="view-btn">
 		<div>
-			<div></div>
-			<div></div>
-			<div></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
 		</div>
 		<div>
-			<div></div>
-			<div></div>
-			<div></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
 		</div>
 		<div>
-			<div></div>
-			<div></div>
-			<div></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
+			<div ng-class="clicked ? 'grid' : 'list'"></div>
 		</div>
 	</div>
 </div>
