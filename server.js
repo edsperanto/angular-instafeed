@@ -2,13 +2,12 @@ const https = require('https');
 const express = require('express');
 const app = express();
 
-const USER_ID = process.env.USER_ID;
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
-
-let target_url = `https://api.instagram.com/v1/users/${USER_ID}/media/recent/?count=99&access_token=${ACCESS_TOKEN}`;
+let target_url = (userId, accessToken) => `https://api.instagram.com/v1/users/${userId}/media/recent/?count=99&access_token=${accessToken}`;
 
 app.get('/api/instafeed', (req, res) => {
-	getPhotos(target_url)
+	userId = req.query.access_token.split('.')[0];
+	accessToken = req.query.access_token;
+	getPhotos(target_url(userId, accessToken))
 		.then(images => {
 			res.json(JSON.parse(images));
 		})

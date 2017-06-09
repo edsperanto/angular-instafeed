@@ -4,10 +4,10 @@ export const InstaService = [
 	class InstaService {
 		constructor($http) {
 			this.$http = $http;
-			this.endpoint = '/api/instafeed';
+			this.endpoint = aT => `/api/instafeed?${aT}`;
 		}
-		getPosts() {
-			return this.$http.get(this.endpoint);
+		getPosts(accessToken) {
+			return this.$http.get(this.endpoint(accessToken));
 		}
 	}
 ]
